@@ -11,7 +11,7 @@
 # The input will only be "east" in different formats.
 
 def direction(arr)
-  arr.map! { |n| n.to_s.tr('eastEAST', 'westWEST') }
+  arr.map { |n| n.tr('eaEA', 'weWE') }
 end
 
 puts direction(["east", "EAST", "eastEAST"]) == ["west", "WEST", "westWEST"]
