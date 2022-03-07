@@ -22,9 +22,7 @@ def find_broken_keys(str1, str2)
   arr_diff = []
 
   arr1.each_with_index do |val,index|
-    if arr1[index] != arr2[index]
-      arr_diff.append(val)
-    end
+    arr_diff.append(val) if arr1[index] != arr2[index]
   end
 
   arr_diff.uniq
