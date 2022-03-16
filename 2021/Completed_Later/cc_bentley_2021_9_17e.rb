@@ -24,8 +24,7 @@
 # 1997           | Fire | Ox
 #
 # These days, the sexagenary cycle is used mainly for historical celebrations
-# and events, and in Chinese astrology. The Gregorian calendar is now the
-# standard means of reckoning time.
+# and events, and in Chinese astrology. The Gregorian calendar is now the standard means of reckoning time.
 #
 # Create a function that takes a number representing a year in the Gregorian
 # calendar, and returns a string consisting of the corresponding stem-andbranch
@@ -38,11 +37,27 @@
 #
 def sexagenary(year)
 
+  base = 4
+  cycle_year = year - base
+
+  heaven_stems = %w(Wood Fire Earth Metal Water)
+  earth_branches =%w(Rat Ox Tiger Rabbit Dragon Snake Horse Sheep Monkey Rooster Dog Pig)
+
+  stem_number = cycle_year % 10
+  heaven_stem = stem_number / 2
+  element = heaven_stems[heaven_stem]
+
+  branch_number = cycle_year % 12
+  animal = earth_branches[branch_number]
+
+  element+" "+animal
+
 end
-# puts sexagenary(1971) == 'Metal Pig'
-# puts sexagenary(1927) == 'Fire Rabbit'
-# puts sexagenary(2017) == 'Fire Rooster'
-# puts sexagenary(2000) == 'Metal Dragon'
-# puts sexagenary(1958) == 'Earth Dog'
-# puts sexagenary(1942) == 'Water Horse'
-# puts sexagenary(1974) == 'Wood Tiger'
+
+puts sexagenary(1971) == 'Metal Pig'
+puts sexagenary(1927) == 'Fire Rabbit'
+puts sexagenary(2017) == 'Fire Rooster'
+puts sexagenary(2000) == 'Metal Dragon'
+puts sexagenary(1958) == 'Earth Dog'
+puts sexagenary(1942) == 'Water Horse'
+puts sexagenary(1974) == 'Wood Tiger'

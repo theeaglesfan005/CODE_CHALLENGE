@@ -18,8 +18,14 @@
 #
 # Notes
 # Return array in sequence: [smaller, bigger]
+require 'prime'
 
 def goldbach_conjecture(n)
+
+  first_prime = Prime.find { |i| [i, n - i] if (n - i).prime? }
+  second_prime = n - first_prime
+
+  [first_prime, second_prime]
 
 end
 
