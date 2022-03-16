@@ -22,30 +22,21 @@
 def sum_of_holes(num)
   holes = 0
   hole_counts = [1, 0, 0, 0, 1, 0, 1, 0, 2, 1]
-  range = (1..num)
-
-  puts range
+  range = (1..num).to_a.join.split('').map(&:to_i)
 
   range.each do |digit|
-    if
-    d = digit % 10
-    holes += hole_counts[d]
+    holes += hole_counts[digit]
   end
 
-  #puts holes
   holes
-  end
-  end
+end
 
-puts sum_of_holes(88)
-
-# puts sum_of_holes(56) == 32
-# puts sum_of_holes(1) == 0
-# puts sum_of_holes(4) == 1
-# puts sum_of_holes(6) == 2
-# puts sum_of_holes(8) == 4
-# puts sum_of_holes(9) == 5
-# puts sum_of_holes(10) == 6
-# puts sum_of_holes(88) == 90
-# puts sum_of_holes(10000) == 22893
-# puts sum_of_holes(12345) == 27991
+puts sum_of_holes(1) == 0
+puts sum_of_holes(4) == 1
+puts sum_of_holes(6) == 2
+puts sum_of_holes(8) == 4
+puts sum_of_holes(9) == 5
+puts sum_of_holes(10) == 6
+puts sum_of_holes(88) == 90
+puts sum_of_holes(10000) == 22893
+puts sum_of_holes(12345) == 27991

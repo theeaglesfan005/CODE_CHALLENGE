@@ -1,7 +1,6 @@
 # Hard - Advanced Array Sort
 # Create a function that takes an array of numbers or strings and returns an array
-# with the items from the original array stored into subarrays. Items of the same
-# value should be in the same subarray.
+# with the items from the original array stored into subarrays. Items of the same value should be in the same subarray.
 # Examples
 # e13a1641a48d147057ef6050ebff42b04fc842ae
 # advanced_sort([2, 1, 2, 1]) ➞ [[2, 2], [1, 1]]
@@ -11,7 +10,7 @@
 # The subarrays should be returned in the order of each element's first appearance in the given array.
 
 def advanced_sort(arr)
-
+  arr.group_by{ |x| x }.values
 end
 
 puts advanced_sort([1,2,1,2]) == [[1,1],[2,2]]

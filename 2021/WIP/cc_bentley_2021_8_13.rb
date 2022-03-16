@@ -21,10 +21,8 @@
 #            # count = 1 (wrong)
 
 #Examples
-#-	count_animals("goatcode") ➞ 2
-#            # "dog", "cat"
-#-	count_animals("cockdogwdufrbir") ➞ 4
-#            # "cow", "duck", "frog", "bird"
+#-	count_animals("goatcode") ➞ 2 # "dog", "cat"
+#-	count_animals("cockdogwdufrbir") ➞ 4 # "cow", "duck", "frog", "bird"
 #-	count_animals("dogdogdogdogdog") ➞ 5
 
 def count_animals(txt)

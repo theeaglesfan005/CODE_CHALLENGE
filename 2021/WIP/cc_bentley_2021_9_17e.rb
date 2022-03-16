@@ -36,8 +36,9 @@
 # sexagenary(1927) ➞ "Fire Rabbit"
 # sexagenary(1974) ➞ "Wood Tiger"
 #
-def sexagenary(year); end
-# Tests
+def sexagenary(year)
+
+end
 # puts sexagenary(1971) == 'Metal Pig'
 # puts sexagenary(1927) == 'Fire Rabbit'
 # puts sexagenary(2017) == 'Fire Rooster'

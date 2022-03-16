@@ -9,7 +9,9 @@
 # Notes
 # An item in the array can be another array.
 
-def sum_arr(arr); end
+def sum_arr(arr)
+  arr.flatten.inject(:+)
+end
 
 puts sum_arr([1, 2, 3]) == 6
 puts sum_arr([1, [1, 2], [3, 1]]) == 8
