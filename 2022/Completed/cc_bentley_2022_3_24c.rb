@@ -19,19 +19,19 @@
 
 def sum_of_vowels(sentence)
   count = 0
-  sent_ary = sentence.downcase.split('')
 
-  sent_ary.each { |i|
-    if i.eql? "a"
+  sentence.downcase.split('').each do |i|
+    case i
+    when "a"
       count = count + 4
-    elsif i.eql? "e"
+    when "e"
       count = count + 3
-    elsif i.eql? "i"
+    when "i"
       count = count + 1
     else
       count = count + 0
     end
-  }
+  end
 
   count
 end
