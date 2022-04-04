@@ -12,11 +12,7 @@
 
 def delete_occurrences(arr, num)
   output = []
-
-  arr.each do |i|
-    output << i if output.count(i) < num
-  end
-
+  arr.each { |i| output << i if output.count(i) < num }
   output
 end
 
