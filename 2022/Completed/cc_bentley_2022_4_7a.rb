@@ -17,17 +17,11 @@
 
 require 'prime'
 def THICC_PRIME(a, b)
+  ary = [a, b].sort
   high_prime = 0
-  if a > b
-    a.downto(b).each do |n|
-      high_prime = n if n.prime? && n > high_prime
-    end
-  else
-    (a...b).each do |n|
-      high_prime = n if n.prime? && n > high_prime
-    end
+  (ary[0]...ary[1]).each do |n|
+    high_prime = n if n.prime? && n > high_prime
   end
-
   high_prime
 end
 
