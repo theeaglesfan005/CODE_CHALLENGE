@@ -4,12 +4,9 @@
 # Create a function that takes two arguments; a positive integer and an array of
 # integers and returns a decoded message as string.
 # Assign a unique number to each letter of the alphabet.
-# a b c d e f g h i j k l m
-# 1 2 3 4 5 6 7 8 9 10 11 12 13
-# n o p q r s t u v w x y z
-# 14 15 16 17 18 19 20 21 22 23 24 25 26
-# There are some variations on the rules of encipherment. One version of the cipher
-# rules are outlined below:
+# a b c d e f g h i j k l m n o p q r s t u v w x y z
+# 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26
+# There are some variations on the rules of encipherment. One version of the cipher rules are outlined below:
 # eMessage = [20, 12, 18, 30, 21]
 # key = 1939
 # digital_decipher(eMessage, key) ➞ "scout"
