@@ -28,7 +28,7 @@ def million_in_month(first_month, multiplier)
     total_saved = first_month + (total_saved * multiplier)
     month_count += 1
 
-    break if total_saved > 1_000_000
+    break if total_saved > 1000000
   end
 
   month_count
