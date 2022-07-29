@@ -27,13 +27,7 @@
 # Remember, after you've finished writing the class, you must instantiate it through the creation of new instances.
 
 class Book
-  def title()
-    @title
-  end
-
-  def author()
-    @author
-  end
+  attr_reader :title, :author
 
   def get_title
     "Title: #{@title}"
@@ -43,24 +37,27 @@ class Book
     "Author: #{@author}"
   end
 
-  def initialize
-    @title = 'Pride and Prejudice'
-    @author = 'Jane Austen'
+  def initialize(title, author)
+    @title = title
+    @author = author
   end
 end
 
-pp = Book.new
+pp = Book.new('Pride and Prejudice', 'Jane Austen')
+h = Book.new('Hamlet', 'William Shakespeare')
+wp = Book.new('War and Peace', 'Leo Tolstoy')
+
 puts pp.title == "Pride and Prejudice"
 puts pp.author == "Jane Austen"
 puts pp.get_title == 'Title: Pride and Prejudice'
 puts pp.get_author == "Author: Jane Austen"
-# #
-# puts h.title == "Hamlet"
-# puts h.author == "William Shakespeare"
-# puts h.get_title == "Title: Hamlet"
-# puts h.get_author == "Author: William Shakespeare"
-#
-# puts wp.title == "War and Peace"
-# puts wp.author == "Leo Tolstoy"
-# puts wp.get_title == "Title: War and Peace"
-# puts wp.get_author == "Author: Leo Tolstoy"
+
+puts h.title == "Hamlet"
+puts h.author == "William Shakespeare"
+puts h.get_title == "Title: Hamlet"
+puts h.get_author == "Author: William Shakespeare"
+
+puts wp.title == "War and Peace"
+puts wp.author == "Leo Tolstoy"
+puts wp.get_title == "Title: War and Peace"
+puts wp.get_author == "Author: Leo Tolstoy"

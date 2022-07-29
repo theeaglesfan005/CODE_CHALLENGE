@@ -17,8 +17,7 @@
 # 	- Notice the singular ohm for values <= 1.
 
 def series_resistance(arr)
-  a = arr.sum
-  a <= 1.0 ? "#{a} ohm" : "#{a} ohms"
+  arr.sum <= 1.0 ? "#{arr.sum} ohm" : "#{arr.sum} ohms"
 end
 
 puts series_resistance([1, 5, 6, 3]) == "15 ohms"
