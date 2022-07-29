@@ -29,6 +29,11 @@
 class Book
   attr_reader :title, :author
 
+  def initialize(title, author)
+    @title = title
+    @author = author
+  end
+
   def get_title
     "Title: #{@title}"
   end
@@ -37,10 +42,6 @@ class Book
     "Author: #{@author}"
   end
 
-  def initialize(title, author)
-    @title = title
-    @author = author
-  end
 end
 
 pp = Book.new('Pride and Prejudice', 'Jane Austen')
