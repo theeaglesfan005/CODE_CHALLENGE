@@ -17,8 +17,8 @@
 # 	- All numbers will be integers (whole numbers).
 
 def right_triangle(x, y, z)
-  sides = [x, y, z].sort
-  sides.any? { |s| s < 1 } ? false : sides[2] == Math.sqrt((sides[0] * sides[0]) + (sides[1] * sides[1]))
+  x, y, z = [x, y, z].sort
+  [x, y, z].any? { |s| s < 1 } ? false : z == Math.sqrt((x**2) + (y**2))
 end
 
 puts right_triangle(3, 4, 5) == true
