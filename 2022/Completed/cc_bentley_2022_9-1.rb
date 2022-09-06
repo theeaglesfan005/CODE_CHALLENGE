@@ -52,11 +52,13 @@ class Shiritori
   def initialize
     @words = []
     @game_over = false
+    @game_restarted_msg = 'game restarted'
+    @game_over_msg = 'game over'
   end
 
   def restart
     initialize
-    'game restarted'
+    @game_restarted_msg
   end
 
   def play(word)
@@ -65,7 +67,7 @@ class Shiritori
       @words
     else
       @game_over = true
-      'game over'
+      @game_over_msg
     end
   end
 
