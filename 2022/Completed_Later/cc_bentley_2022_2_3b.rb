@@ -7,14 +7,20 @@
 # length("") ➞ 0
 
 def length(s)
-  if s == ''
-    0
+  count = 0
+  if s.empty?
+    count
   else
-    length(s[0..0])
+    count = 1 + length(s.chop)
   end
+  count
 end
 
-puts length("make")
+puts length('shipment') == 8
+puts length('apple') == 5
+puts length('make') == 4
+puts length('a') == 1
+puts length('') == 0
 
 # puts length("shipment") == 8
 # raise("Function should be called more than once.") unless count != 1

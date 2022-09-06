@@ -32,7 +32,16 @@
 # digital_decipher([14, 30, 11, 1, 20, 17, 18, 18], 1990) ➞ "mubashir"
 # digital_decipher([6, 4, 1, 3, 9, 20], 100) ➞ "edabit"
 #
-def digital_decipher(eMessage, key); end
+def digital_decipher(eMessage, key)
+  cipher = { 1 => 'a', 2 => 'b', 3 => 'c', 4 => 'd', 5 => 'e', 6 => 'f', 7 => 'g', 8 => 'h', 9 => 'i', 10 => 'j',
+             11 => 'k', 12 => 'l', 13 => 'm', 14 => 'n', 15 => 'o', 16 => 'p', 17 => 'q', 18 => 'r', 19 => 's',
+             20 => 't', 21 => 'u', 22 => 'v', 23 => 'w', 24 => 'x', 25 => 'y', 26 => 'z' }
+
+  key_ary = key.to_s.ljust(eMessage.length, key.to_s).split('').map(&:to_i)
+  dec_ary = eMessage.zip(key_ary).map { |arr| arr.inject(:-) }
+
+  dec_ary.map! { |x| cipher[x] || dec_ary }.join('')
+end
 
 puts digital_decipher([14, 10, 22, 29, 6, 27, 19, 18, 6, 12, 8], 1939) == "masterpiece"
 puts digital_decipher([20, 12, 18, 30, 21], 1939) == "scout"
