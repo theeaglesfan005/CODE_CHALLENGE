@@ -7,13 +7,7 @@
 # length("") ➞ 0
 
 def length(s)
-  count = 0
-  if s.empty?
-    count
-  else
-    count = 1 + length(s.chop)
-  end
-  count
+  s.empty? ? 0 : 1 + length(s.chop)
 end
 
 puts length('shipment') == 8
