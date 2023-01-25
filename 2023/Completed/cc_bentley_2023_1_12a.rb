@@ -30,6 +30,7 @@
 # 	- No rooms will repeat.
 
 def possible_path(arr)
+  arr.join('') !~ /13|31|14|41|23|32|1H|H1|3H|H3/
 end
 
 puts possible_path([1, 2, "H", 4, 3]) == true
